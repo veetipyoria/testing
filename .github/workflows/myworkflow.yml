@@ -1,1 +1,7 @@
-
+name: My workflow
+on: [push, repository_dispatch]
+jobs:
+  test-simple:run:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "Hello World!"
