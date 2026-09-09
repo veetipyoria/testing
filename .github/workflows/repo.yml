@@ -8,4 +8,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
       - name: Commands
-        run: ls -la
+        run: git log --oneline
