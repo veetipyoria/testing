@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-          fetch_tags: 'true'
+          fetch-tags: 'true'
       - name: Commands
         run: |
           touch commits.txt
