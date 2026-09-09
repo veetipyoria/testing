@@ -1,0 +1,23 @@
+name: Repo info
+on: workflow_dispatch
+
+jobs: 
+  repo_test: 
+    runs-on: ubuntu_latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch_tags: 'true'
+      - name: Commands
+        run: |
+          touch commits.txt
+          git log --oneline > commits.txt
+      - name: Print info
+        run: cat commits.txt
+      - name: Tag print
+        run: |
+          git tag
+          git checkout 1.0
+          cat README.md
