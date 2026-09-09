@@ -2,7 +2,7 @@ name: Repo info
 on: workflow_dispatch
 
 jobs: 
-  repo_test: 
+  repo-test: 
     runs-on: ubuntu_latest
     steps: 
       - name: Checkout repository
