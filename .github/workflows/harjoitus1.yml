@@ -18,7 +18,7 @@ jobs:
           cp info.txt backup/info.txt
       - name: contents
         run: |
-          ls -la /
-          ls -la /backup
+          ls -la
+          ls -la backup
           cat info.txt
           
