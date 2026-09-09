@@ -21,4 +21,8 @@ jobs:
           ls -la
           ls -la backup
           cat info.txt
-          
+
+  yesno:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl https://yesno.wtf/api
