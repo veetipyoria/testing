@@ -8,6 +8,13 @@ jobs:
   math_counter:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Your app name is $APP_NAME and version is $APP_VERSION"
+      - uses: actions/checkout@v7
+      - run: |
+          echo "Your app name is $APP_NAME and version is $APP_VERSION"
+          prinf "Push implemented\n" >> log.txt
+          git config --global user.name 'veetipyoria'
+          git config --global user.email 'vpyoria24@students.oamk.fi'
+          git add .
+          git commit -m 'New push info'
 
     
