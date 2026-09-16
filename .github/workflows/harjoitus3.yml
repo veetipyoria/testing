@@ -34,8 +34,7 @@ jobs:
       - name: Add issue information to README
         if: github.event_name == 'issues' && github.event.action == 'opened'
         run: |
-          echo "${{ github.event.issue.title }} - ${{ github.event.issue.assignee.login }}" >> README.md
-          echo "[Issue](${{ github.event.issue.html_url }})" >> README.md
+          echo "- ${{ github.event.issue.title }} - ${{ github.event.issue.assignee.login }} — [Issue #${{ github.event.issue.number }}](${{ github.event.issue.html_url }})" >> README.md
       - name: Handle issue comment
         if: github.event_name == 'issue_comment' && github.event.action == 'created'
         run: |
