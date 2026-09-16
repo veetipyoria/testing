@@ -44,7 +44,7 @@ jobs:
       - name: Show event payload
         if: github.event_name == 'issue_comment' && github.event.action == 'created'
         run: |
-          echo '${{ toJson(github.event) }}'
+          echo "${{ toJson(github.event) }}"
       - name: Add issue URL to README
         if: github.event_name == 'issue_comment' && github.event.action == 'created'
         run: |
