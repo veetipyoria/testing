@@ -1,5 +1,7 @@
 name: Math counter
 on: workflow_dispatch
+permissions:
+  contents: write
 env:
   APP_NAME: MathCounter 
   APP_VERSION: v.1.0.2
