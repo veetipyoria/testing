@@ -1,0 +1,13 @@
+name: Math counter
+on: workflow_dispatch
+env:
+  APP_NAME: MathCounter 
+  APP_VERSION: v.1.0.2
+
+jobs:
+  math_counter:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Your app name is $APP_NAME and version is $APP_VERSION"
+
+    
