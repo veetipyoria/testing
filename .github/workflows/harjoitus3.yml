@@ -29,8 +29,8 @@ jobs:
       - name: Handle new issue
         if: github.event_name == 'issues' && github.event.action == 'opened'
         run: |
-          echo "`Issue title: ${{ github.event.issue.title }}`"
-          echo "`Assignee: {{ github.event.issue.assignee.login }}`"
+          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Assignee: {{ github.event.issue.assignee.login }}"
       - name: Add issue information to README
         if: github.event_name == 'issues' && github.event.action == 'opened'
         run: |
