@@ -43,8 +43,10 @@ jobs:
           echo "Comment author: ${{ github.event.comment.user.login }}" 
       - name: Show event payload
         if: github.event_name == 'issue_comment' && github.event.action == 'created'
+        env:
+          EVENT_PAYLOAD: ${{ toJson(github.event) }}
         run: |
-          echo "${{ toJson(github.event) }}"
+          echo "$EVENT_PAYLOAD"
       - name: Add issue URL to README
         if: github.event_name == 'issue_comment' && github.event.action == 'created'
         run: |
