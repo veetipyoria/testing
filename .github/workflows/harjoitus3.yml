@@ -5,7 +5,7 @@ permissions:
 env:
   APP_NAME: MathCounter 
   APP_VERSION: v.1.0.2
-
+  KEY_WORD: lol
 jobs:
   math_counter:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v7
       - run: |
           echo "Your app name is $APP_NAME and version is $APP_VERSION"
-          printf "Push implemented\n" >> log.txt
+          printf "$KEY_WORD Push implemented\n" >> log.txt
           git config --global user.name 'veetipyoria'
           git config --global user.email 'vpyoria24@students.oamk.fi'
           git add .
